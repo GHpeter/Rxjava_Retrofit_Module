@@ -15,11 +15,11 @@ moduleEventBus：实现module之间通信(此基础项目版本中暂未使用)
 
 3 项目代码主体架构设计      
 
-app： 一个空壳，本身不参加业务逻辑，最终打包成完整的release APK 
-UserCenter：实现用户中心模块业务逻辑代码
-Provider：主要存放业务相关的entity或sp数据等
-baselib：主要是最基础的可共用的类，比如：baseActivity,baseFragment等
-
+app： 一个空壳，本身不参加业务逻辑，最终打包成完整的release APK       
+UserCenter：实现用户中心模块业务逻辑代码     
+Provider：主要存放业务相关的entity或sp数据等        
+baselib：主要是最基础的可共用的类，比如：baseActivity,baseFragment等      
+    
 
 
 
