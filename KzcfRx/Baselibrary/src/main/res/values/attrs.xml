@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaterialCircleProgressBar">
+        <attr name="progressColor" format="color"/>
+        <attr name="backgroundEnabled" format="boolean"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="progressSize" format="enum">
+            <enum name="normal" value="1"/>
+            <enum name="large" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="type" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+        <attr name="borderRadius" format="dimension" />
+    </declare-styleable>
+
+    <attr name="single" format="boolean" />
+
+    <attr name="label" format="string" />
+    <attr name="labelColor" format="color"/>
+    <attr name="content" format="string" />
+    <attr name="contentColor" format="color"/>
+    <attr name="signVisible" format="enum">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="4" />
+        <enum name="gone" value="8" />
+    </attr>
+    <attr name="arrowVisible" format="enum">
+        <enum name="visible" value="0" />
+        <enum name="invisible" value="4" />
+        <enum name="gone" value="8" />
+    </attr>
+    <attr name="hint" format="string" />
+    <attr name="contentAlignment" format="enum">
+        <enum name="left" value="0"/>
+        <enum name="right" value="1"/>
+    </attr>
+
+    <declare-styleable name="ClickItemViewNewO">
+        <attr name="label" />
+        <attr name="labelColor" />
+        <attr name="signVisible" />
+        <attr name="hint" />
+        <attr name="contentAlignment"/>
+        <attr name="contentColor" />
+        <attr name="arrowVisible" />
+        <attr name="arrowDrawable" format="reference"/>
+        <attr name="labelDrawable" format="reference"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="MenuItemView">
+        <attr name="menuIcon" format="reference"/>
+        <attr name="menuLabel" format="string"/>
+        <attr name="menuSubLabel" format="string"/>
+    </declare-styleable>
+</resources>

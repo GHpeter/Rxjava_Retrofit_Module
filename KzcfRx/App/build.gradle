@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+Properties properties = new Properties()
+properties.load(new FileInputStream("gradle.properties"))
+isUserModule = properties.getProperty("isUserModule")
+println "gradle中的属性值:====>" + properties.getProperty("isUserModule")
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    // 关闭PNG合法性检查的./gradlew clean
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    useLibrary 'org.apache.http.legacy'
+
+    // 移除lint检查的error
+    lintOptions.abortOnError = false
+    defaultConfig {
+        multiDexEnabled true
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+
+    compile project(':Provider')
+
+    if (isUserModule.toBoolean()) {
+        compile project(':UserCenter')
+    }
+}
+
